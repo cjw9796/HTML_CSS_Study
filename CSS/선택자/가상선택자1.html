@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상 선택자1</title>
+    <style>
+        /* 
+가상 클래스 선택자 
+선택자 뒤에 :가상이벤트를 붙이면 특정 이벤트마다 적용 할 스타일을 설정 할 수 있으며, 
+이를 가상 (추상)클래스라 한다. 
+
+    : 이 가상 클래스 선택자이다.
+*/
+
+
+        /*px폰트를 고정해서 사용할 때*/
+        a:hover {
+            color: yellowgreen;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        
+        /*hover : 선택자에 마우스 포인터가 올라가 있는 동안에만! 선택된다. */
+        .box1 {
+            width: 100px;
+            height: 100px;
+            background-color: tomato;
+            transition-duration: 1s;
+            /*애니메이션 실행시간, 단위는 초 단위로 뒤에 s*/
+        }
+
+        .box1:hover {
+            width: 200px;
+            background-color: blue;
+        }
+        
+        /*active: 선택자를 마우스로 누르고 있는 동안에만 선택된다.*/
+        .box2 {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            transition-duration: 1s;
+        }
+
+        .box2:active {
+            width: 200px;
+            background-color: skyblue;
+        }
+        
+        
+        
+                /*focus: 포거스가 된 동안에만 선택된다.
+                ex) 대화형 컨텐츠(input, img)에서 사용이 가능하다. 
+                */
+        input {
+            width: 100px;
+            background-color: hotpink;
+            outline: none;
+            /*input의 외곽선을 설정*/
+            border: 3px solid red;
+            padding: 5px 10px;
+            transition-duration: 1s;
+        }
+        input:focus {
+            width: 200px;
+            background-color: yellow;
+            border: 5px solid blue;
+        }
+
+
+        /*html 계층 구조에서 특정 위치에 있는 요소를 수학적으로 접근 */
+        /*first - child: 선택자가 형제 요소 중 첫번째 요소라면 선택 */
+
+        .fruits>li:first-child {
+            color: red;
+        }
+
+        /*last- child 선택자 중에서 마지막 요소라면 선택*/
+        .fruits > li:last-child{
+            color: violet;
+        }
+
+    </style>
+
+
+
+
+</head>
+
+<body>
+    <a href="https://www.google.com">google</a>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <input type="text" />
+
+    <ul class="fruits">
+        <li>딸기</li> <!--first child-->
+        <li>사과</li>
+        <li>오렌지</li>
+        <li>망고</li> <!--last child-->
+    </ul>
+
+
+</body>
+
+</html>

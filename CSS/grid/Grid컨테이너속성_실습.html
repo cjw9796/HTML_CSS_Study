@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid컨테이너속성_실습</title>
+
+    <style>
+ .container{ /* 그리드 갯수,크기 조정 */
+            width: 600px;
+            grid-template-rows: repeat(3,100px); /*rows: 100px씩 3개*/ 
+            grid-template-columns: repeat(3,1fr); /*cloumns: 3등분 해라*/
+            border: 4px solid dodgerblue;
+            display: grid;
+
+       
+              /* 그리드 템플릿 */
+            grid-template-areas:
+            "header header header"
+            "main main aside"
+            "footer footer footer" ;
+
+            /* gap을 이용해서 간격을 설정 */
+            row-gap: 30px;
+            column-gap: 10px;
+
+           
+        }
+
+         .container .item{
+            border: 6px solid red;
+        }
+
+        .container .item:nth-child(1){
+            grid-area: header;
+            background-color: red;
+        }
+
+        .container .item:nth-child(2){
+            grid-area: main;
+            background-color: yellow;
+        }
+
+        .container .item:nth-child(3){
+            grid-area: aside;
+            background-color: green;
+        }
+
+        .container .item:nth-child(4){
+            grid-area: footer;
+            background-color: skyblue;
+        }
+
+    </style>
+</head>
+<body>
+  <div class="container">
+       
+        <div class="item">Header</div>
+        <div class="item">Main</div>
+        <div class="item">Aside</div>
+        <div class="item">Footer</div>
+
+
+    </div>
+
+    
+</body>
+</html>

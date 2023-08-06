@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input태그</title>
+</head>
+<body>
+    <input> 태그 <br>
+    <hr>
+<!--
+    input 태그: 웹 기반 양식에서 사용자의 데이터를 받을 수 있는 대화형 컨트롤을 생성
+    사용자가 정보를 입력하는 부분 
+    type 형식으로 폼을 지정한다. 
+
+    
+    form 태그: 
+    html 에서 입력을 받은 다음에 데이터베이스 서버로 전송해서 내가 추가적인 기능할 수 있도록 만들어 주는것! 
+    get방식과 post방식이 있다. 
+-->
+   
+<form> 
+    <input type="button" value="새 탭 열기"
+    onclick="window.open()">
+</form>
+
+<form>
+    물품 가격:
+    <input type="text" size="10" maxlength="10"> <br> <!--텍스트바 사이즈 주기-->
+    물품 수량:
+    <input type="text" value="수량" name="물품수량"> <br>
+    물품 재고:
+    <input type="text"> <br>
+
+    <input type="button" value="확인" onclick="alert('확인완료!')"> <!--웹 브라우저의 팝업창('메시지')-->
+
+</form>
+
+<!--textarea: 여러줄을 작성할 수 있는 태그
+    텍스트 창에 너비, 높이 지정 가능하다. html는 행 열로 설정, css는 너비 높이로 설정 
+-->
+<form action="">
+    <input type="textarea" placeholder="내용을 입력하세요">  
+</form>
+
+<form>
+    First name :<br>
+    <input type="text" name="firstname" maxLength="3" required><br> <!-- 필수입력 + 3자 제한 -->
+    Last name :<br>
+    <input type="text" name="lastname"><br>
+    별명 :<br>
+    <input type="text" name="alias" placeholder="없을시 생략"> <!--placeholder: 힌트 표시 -->
+  </form>
+
+ 
+  <form>   
+    (체크박스)과일선택:  <!--checkbox:여러 개의 옵션을 선택할 수 있다.--> 
+    <input type="checkbox" checked> Apple  <!-- checked: check가 설정된 상태로 표시-->
+    <input type="checkbox" > Grape
+    <input type="checkbox" > Orange
+<br>
+    (라디오버튼)성별: <!--라디오버튼: 여러개의 옵션 중 1개 선택 가능-->
+    <input type="radio" name="gender" value="male"> 남성
+    <input type="radio" name="gender" value="female"> 여성
+<br>
+    (이메일)이메일: 
+    <input type="email" required> <br>
+    <input type="submit" value="전송하기"> <br>
+    <input type="color" name="mycolor">
+  </form>
+
+  
+
+
+</body>
+</html>

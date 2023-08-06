@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid 컨테이너 속성1</title>
+    <style>
+        /*  **수업자료 grid사진1
+        css grid는 2차원 레이아웃 시스템을 제공한다. 
+        두 방향(가로-세로) 레이아웃 시스템 (2차원)
+
+        부모 요소인 div.container를 Grid Container(그리드 컨테이너)라고 부르고,
+        자식 요소인 div.item들을 Grid Item(그리드 아이템)이라고 부른다.
+        “컨테이너가 Grid의 영향을 받는 전체 공간이고, 설정된 속성에 따라 각각의 아이템들이 어떤 형태로 배치되는 것”이라고 생각하시면 됩니다.
+
+        Grid는 Flex와 마찬가지로 컨테이너와 아이템 두가지로 나눈다.
+        컨테이너 item을 감싸는 부모요소
+        그 안에 item들을 배치한다. (컨테이너의 자식요소)
+
+        그리드 라인(Grid Line): Grid 셀을 구분하는 선
+        그리드 트랙(Grid Track): 두 개의 그리드 라인 사이의 공간, Grid의 행(Row) 또는 열(Column)
+        그리드 셀(Grid Cell): Grid의 한 칸을 가리킴
+        그리드 영역(Grid Area): Grid 라인으로 둘러싸인 사각형 영역으로, 그리드 셀의 집합
+        그리드 갭(gap): Grid 셀 사이의 간격
+
+
+        display : grid 컨테이너를 정의한다. 
+                block 특성으로 컨테이너를 정의한다. 
+        display: inline-grid; : inline 특성을 가지는 grid 컨테이너 
+        */
+
+        .container1{
+            width: 300px;
+            height: 300px;
+            border: 4px solid green;
+            display: grid;
+        }
+
+        .container1 .item1{
+            border: 2px dashed orange;  /*dashed: 점선*/
+        }
+
+        .container2{
+            width: 300px;
+            height: 300px;
+            border: 4px solid blue;
+            display: inline-grid;
+        }
+
+        .container2 .item2{
+            border: 2px dashed orange;  /*dashed: 점선*/
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container1">
+		<div class="item1">1</div>
+		<div class="item1">2</div>
+		<div class="item1">3</div>
+	</div>
+	<div class="container1">
+		<div class="item1">4</div>
+		<div class="item1">5</div>
+		<div class="item1">6</div>
+	</div>
+
+	<div class="container2">
+		<div class="item2">11</div>
+		<div class="item2">22</div>
+		<div class="item2">33</div>
+	</div>
+
+	<div class="container2">
+		<div class="item2">44</div>
+		<div class="item2">55</div>
+		<div class="item2">66</div>
+	</div>
+</body>
+</html>

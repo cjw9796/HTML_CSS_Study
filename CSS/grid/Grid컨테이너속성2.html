@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid 컨테이너 속성2</title>
+
+    <style>
+
+        /* 그리드 형태 정의  **수업자료 사진2 
+        grid-template-rows : 행의 크기를 정의하며 행의 이름도 정의할 수 있다. 
+        grid-template-columns : 열의 크기 및 열의 이름도 정의가능하다. 
+        
+        grid-template-rows: 1행크기 2행크기 ...;
+        grid-template-rows: [선이름] 1행크기 [선이름] 2행크기 [선이름] ...; 
+        
+         grid-template-columns: 1열크기 2열크기 ...;
+         grid-template-columns: [선이름] 1열크기 [선이름] 2열크기 [선이름] ...;   
+         */
+
+         /* 
+         .컨테이너{
+              display: grid;
+              grid-template-rows: 300px 50px 100px; (세로의 길이를 각각 300 50 100개로 나눈다.)
+              grid-template-columns: 200px 50px (가로 길이를 각각 200 50으로 나눈다.)
+         }
+         */
+
+
+    .container{
+            width: 300px;
+            height: 300px;
+            border: 4px solid green;
+            display: grid;
+
+             /*
+            repeat(반복횟수, 반복값):행 높이 또는 열 너비를 반복해서
+            지정한다. 
+            두번째 인수를 몇번 만큼 반복한다. 
+            */
+            /* grid-template-rows: 100px 100px; : 1행크기, 2행크기  */
+            /* grid-template-rows: repeat(2, 100px); */
+            /* grid-template-columns: 200px 200px 200px; */
+            /* grid-template-columns: repeat(3, 200px); */
+
+            
+            /* fr(fraction, 공간 비율)  fr은 fraction, 숫자 비율대로 트랙의 크기를 나눈다.*/
+            /* 1fr 1fr => 2개의 행 또는 열이 컨테이너 전체 크기에 1 : 1 비율로 채워진다. */
+            /* grid-template-rows: 1fr 1fr; 
+            */
+
+            grid-template-rows: repeat(2,1fr);
+            grid-template-rows: repeat(2,100px);  /*100px로 나누고 2번 반복한다.*/
+
+            grid-template-columns: repeat(3,1fr);
+            grid-template-columns: repeat(3,100px 200px); 
+        }
+        
+
+        .container .item{
+            border: 2px dashed orange;  /*dashed: 점선*/
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+		<div class="item">11</div>
+		<div class="item">22</div>
+		<div class="item">33</div>
+		<div class="item">44</div>
+		<div class="item">55</div>
+		<div class="item">66</div>
+	</div>
+
+</body>
+</html>

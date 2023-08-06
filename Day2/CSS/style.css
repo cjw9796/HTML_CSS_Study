@@ -1,0 +1,41 @@
+/*cssEx의 style.css*/
+
+body{
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: black;
+        background-color: rgb(255, 255, 255);
+    }
+
+    /* 동일한 이름을 가진 클래스들끼리 선택해서 지정
+     .클래스명: 클래스 선택자
+    */
+    .male{
+        color: blue;
+    }
+    .female{
+        color: rgb(245, 11, 11);
+    }
+
+    .ul{
+        /*앞에 점 없애기*/
+        list-style: none;
+    }
+
+/*동시 선택하기
+태그 클래스 이름, 아이디 이름
+li.클래스이름
+*/  
+
+li.key{
+    color: blue;
+}
+
+/*내부 선택하기*/
+ul li{
+    font-style: italic;
+}
+
+/* li 중에 마우스를 올리면 배경색 보여주기*/
+li:hover{
+    background-color: chartreuse;
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>emmet</title>
+  </head>
+  <body>
+    <!-- emmet: 태그랑 css 문법을 자동완성 시켜주는 기능
+    명령어를 작성 tap
+        자식요소 > 태그안에 태그를 집어 넣을 때 사용 
+        dib 태그 자동완성 div
+-->
+
+    <!--div>p : div 안에 p 자동완성-->
+    <div>
+      >
+      <p></p>
+    </div>
+
+    <!--div>p>span : div 안에 p 안에 span자동완성-->
+    <div>
+      <p>><span></span></p>
+    </div>
+
+    <!--div>p+span : div 안에 p랑 span자동완성-->
+    <div>
+      <p></p>
+      <span></span>
+    </div>
+
+    <!--.class tap키-->
+    <div class="class"></div>
+    <div class="item1"></div>
+
+    <ul class="class">
+      <li class="item1"></li>
+      <li></li>
+      <li></li>
+    </ul>
+
+    <ul>
+      <li1></li1>
+    </ul>
+
+    <!--ul>li.item$@3*5-->
+    <ul>
+      <li class="item3"></li>
+      <li class="item4"></li>
+      <li class="item5"></li>
+      <li class="item6"></li>
+      <li class="item7"></li>
+    </ul>
+
+    <!--아이디 값으로 선언 #-->
+    span#hello
+
+    <!--속성 태그명[키워드=값,]
+    p[title=helloworld]
+-->
+    <p title="helloworld"></p>
+
+    <!-- 텍스트 태그명{값}
+        .fruit{apple}
+-->
+    <div class="fruit">apple</div>
+
+    <a href="" class="clickme"></a>
+
+    <!-- 종합예제 : div>ul+li.list-item*5{list$}-->
+    <div>
+      <ul></ul>
+      <li class="list-item">list1</li>
+      <li class="list-item">list2</li>
+      <li class="list-item">list3</li>
+      <li class="list-item">list4</li>
+      <li class="list-item">list5</li>
+    </div>
+    <!--종합예제2: div>ul+li.list-item*5>a{list$}-->
+    <div>
+      <ul></ul>
+      <li class="list-item"><a href="">list1</a></li>
+      <li class="list-item"><a href="">list2</a></li>
+      <li class="list-item"><a href="">list3</a></li>
+      <li class="list-item"><a href="">list4</a></li>
+      <li class="list-item"><a href="">list5</a></li>
+    </div>
+
+    <!--table>.row>td-->
+
+    <table>
+      <tr class="row">
+        <td></td>
+      </tr>
+    </table>
+
+    <!--a-->
+    <a href=""></a>
+
+    <!--a:link-->
+    <a href="http://"></a>
+  </body>
+</html>

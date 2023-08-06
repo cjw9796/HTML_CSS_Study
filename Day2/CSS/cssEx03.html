@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS id Example</title>
+</head>
+<style>
+    /* #아이디명 : id선택자 
+    아이디 선택자는 CSS를 적용할 대상으로 특정 요소를 선택할 때 사용
+    웹 페이지에 포함된 여러 요소 중에서 특정 아이디 이름을 가지는 요소만을 선택*/
+    #special {
+        background-color: yellow;
+        color: red;
+    }
+
+    h1,
+    h2 {
+        /*그룹선택자: 여러 선택자를 같이 사용하고자 할때 사용 ,(쉼표)로 구분하여 연결*/
+
+        font-size: 30px;
+
+    }
+
+    h1,
+    h2,
+    p {
+        text-align: center;
+    }
+</style>
+
+<body>
+    <h1>그룹 셀렉터 설명</h1>
+    <h2>여러 선택자를 같이 사용하고 싶을 때 사용 </h2>
+    <p>스타일에 작성할 때 태그, 태그명, ...</p>
+    <br>
+
+    <p id="special">ID가 SPECIAL인 단락입니다.</p>
+    <p id="special">ID가 SPECIAL인 단락입니다.
+        중복적 이름써도 실행된다. 단 웹표준에 어긋남
+    </p>
+    <P>정상적인 단락입니다.</P>
+
+</body>
+
+</html>

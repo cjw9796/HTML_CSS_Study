@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+               
+       
+
+        .container{
+            width: auto;
+            height: auto;
+            grid-template-rows: repeat(5,100px); /*100px씩 3개*/ 
+            grid-template-columns: repeat(5,1fr); /*3등분 해라*/
+            border: 4px solid dodgerblue;
+            display: grid;
+            
+
+            grid-template-areas:
+            "nav nav nav"
+            "header header header"
+            "main main main"
+            "article article article"
+            "footer footer footer" ;
+
+            /* gap을 이용해서 간격을 설정 */
+            row-gap: 30px;
+            column-gap: 10px;
+
+        }
+
+        .container .item{
+            border: 6px solid red;
+          
+        }
+
+        .container .item:nth-child(1){
+            grid-area: header;
+            text-align: center;
+            color: white;
+            background-image:url(jumbotronBackground.jpg)
+            
+            
+        
+        }
+
+        .container .item:nth-child(2){
+            grid-area: main;
+            grid-template-columns: repeat(3,1fr);
+            
+
+        }
+
+        .container .item:nth-child(3){
+           
+           grid-area: article;
+           
+
+       }
+
+       
+
+        .container .item:nth-child(4){
+            grid-area: footer;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">header
+            <p>날로 먹는 코딩 온라인 강좌 사이트</p>
+            <p>날로 먹는 코딩은 IT교육 사이트 입니다. 다양한 날로 먹는 IT관련 강의가 존재합니다.</p>
+            <button style="background-color: rgb(57, 124, 247);">강의 들으러 가기</button>
+        </div>
+
+
+
+        <div class="item">main
+            <span>
+                <p> 날로 먹는 코딩의 특징</p>
+                <p>날로 먹는 코딩은 다른 사이트와 차원이 다른 깔끔한 구성을 보여줍니다.</p>
+                <button style="background-color: greenyellow;">자세히 알아보기</button>
+            </span>
+
+            <span>
+                <p> 폭 넓은 강사진</p>
+                <p>날로 먹는 코딩은 정말 뛰어난 능력을 가진 강사진으로 뽑습니다.</p>
+                <button style="background-color: rgb(245, 85, 85);">자세히 알아보기</button>
+            </span>
+
+            <span>
+              <p>핵심적인 강의</p>
+              <p>강의는 실제 개반에 있어서 반드시 필요한 핵심적인 내용을 중심으로 다룹니다.</p>
+              <button style="background-color: skyblue;">자세히 알아보기</button>           
+            </span>
+        </div>
+
+
+        <div class="item">article
+
+            <span>
+                <p>C언어 기초 프로그래밍 강의</p>
+                <p>C언어 강의는 기초 프로그래밍 강의입니다.
+                    처음 프로그램을 접하는 입문자가 듣기 적합한 강의로 강의료는 무료이며 C언어 기초 프로그래밍 강의는 총 20강의로 구성됩니다.
+                </p>
+            </span>
+
+            <span>
+                <p>JAVA기초 프로그래밍 강의</p>
+                <P>JAVA언어 강의는 객체 지향 프로그래밍의 기본을 알려주는 강의 입니다.
+                    처음 프로그램을 접하는 입문자가 듣기 적합한 강의로 강의료는 무료이며
+                    JAVA기초 프로그래밍 강의는 총 30강의로 구성됩니다.
+                </P>
+            </span>
+
+            <span>
+                <p>Android 언어 프로그래밍 강의</p>
+                <p>Android 강의는 java 또는 kotiln을 활용하여 Android 어플리케이션을 개발하는 프로그래밍 강의입니다.
+                    속도감 있는 강의로 앱 개발 입문자가 빠르게 앱을 만들어 보면서 기본 개념을 탄탄히 다지도록 합니다.
+                    강의료는 100,000이며 Android 프로그래밍 강의는 총 40강의로 구성됩니다.
+                </p>
+            </span>
+
+        </div>
+
+
+        <div class="item">Footer
+            <span>
+                <p>Copyright@</p>
+                <p>홍길동(Hong gil dong)</p>
+            </span> 
+
+            <span>
+                <p>대표자 소개</p>
+                <p>저는 날로 먹는 코딩의 대표 홍길동 입니다. 부트스트랩을 사용해서 웹 디자인을 하고 있습니다.</p>
+            </span>
+
+            <span>
+                <p>네비게이션</p>
+                <p>소개</p>
+                <p>강사진</p>
+                <p>강의</p>
+            </span>
+
+            <span>
+                <p>페이스북</p>
+                <p>유튜브</p>
+                <p>아프리카tv</p>
+            </span>
+        </div>
+
+
+    </div>
+</body>
+</html>

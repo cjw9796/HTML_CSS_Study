@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container {
+        background-color: yellow;
+        width: 100vh;
+        height: 100vh;
+        position: relative;
+
+    }
+
+    .block {
+        width: 30px;
+        height: 30px;
+        background-color: red;
+        border: 1px solid black;
+        font-size: 20px;
+        margin: 5px;
+    }
+
+    #a {
+        position: static;
+        left: 100px;
+        top: 20px;
+    }
+
+    #b {
+        position: relative;
+    }
+
+    #c {
+        position: absolute;
+        top: 50px;
+        left: 50px;
+    }
+
+    #d {
+        position: fixed;
+        bottom: 0px;
+
+    }
+
+    #e {
+        position: sticky;
+        bottom: 0px;
+
+    }
+</style>
+
+<body>
+    <h1>포지션 position</h1>
+    <ul>
+        <li>웹 문서 안에 요소값들 (태그) 배치하는 속성 </li>
+        <li>기본적으로 4가지 </li>
+        <li>css 설정 할 때 position : 속성값</li>
+        <li>1.기본설정 static </li>
+        <li>2.relative 기본 static부분에서 상대적으로 움직인다.</li>
+        <li>3.absolute 절대위치, 화면기준! 단, 부모한테 relative 그 부모 기준으로 설정이 이루어 진다.</li>
+        <li>4.sticky: 스크롤 시 화면에 고정됨</li>
+        <li>5.fiexd: 절대 위치</li>
+
+    </ul>
+
+    <article class="container">
+
+        <div class="block" id="a">abcd</div>
+        <div class="block" id="b">b</div>
+        <div class="block" id="c">c</div>
+        <div class="block" id="d">d</div>
+        <div class="block" id="e">e</div>
+
+</body>
+
+</html>

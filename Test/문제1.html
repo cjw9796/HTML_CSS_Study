@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<!--css-->
+<style>    
+    #작성하기버튼 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 90px;
+    }
+
+    #table1{
+        width: 900px;
+        height: 200px;
+        margin-top: 2%;
+    }
+
+
+</style>
+
+<!--javascript-->
+<script>
+
+    let titlecheck = document.getElementById(title);
+    let contentcheck = document.getElementById(content);
+
+//addEventListener(onclick(작성하기버튼)=>())
+
+
+    
+function write(){
+        if (title == "") {
+            alert("제목은 필수 입력사항입니다.")
+        }
+
+        if (content == "") {
+            alert("내용은 필수 입력사항입니다.")
+        }
+        
+        else{
+            alert("작성이 완료되었습니다.")
+        }
+    }
+
+</script>
+
+<body>
+
+    <form action="insert.no" method="post" onsubmit="write()">
+        <fieldset>
+            <legend>공지사항 작성하기</legend>
+
+            <div>
+                제목<input type="text" name="title" id="title" placeholder="제목을 입력하시오">
+            </div>
+
+            <div>
+                내용 <input type="textfield" name="content" id="content" placeholder="내용을 입력하시오" >
+            </div>
+
+            <div>
+                첨부파일 <button type="button" name="uploadFile" id="uploadFile">파일선택</button> 선택된 파일 없음
+            </div>
+
+            <button type="submit" onclick="write()"  id="작성하기버튼">작성하기</button>
+            
+            
+            
+        </fieldset>
+    </form>
+
+
+    <table class="table" border="1" id="table1">
+
+     <thead style="background-color: rgb(250, 149, 113);">
+        <th scope="col"> 번호</th>
+        <th scope="col" colspan="2"> 제목</th>
+        
+        <th scope="col"> 작성자</th>
+        <th scope="col"> 작성일</th>
+        <th scope="col"> 조회수</th>
+     </thead>
+        
+     <tbody style="background-color: antiquewhite;">
+
+        <tr>
+            <td>9</td>  <!--번호-->
+            <td>공지사항제목 9</td> <!--제목-->
+            <td><button>바로가기</button></td>  
+            <td> user01</td>  <!--작성자-->
+            <td> 2021-03-29</td> <!--작성일-->
+            <td>34</td> <!--조회수-->
+        </tr>
+
+        <tr>
+            <td>6</td>  <!--번호-->
+            <td>공지사항제목 6</td> <!--제목-->
+            <td><button>바로가기</button></td>  
+            <td> answ445</td>  <!--작성자-->
+            <td> 2021-03-12</td> <!--작성일-->
+            <td>67</td> <!--조회수-->
+        </tr>
+
+        <tr>
+            <td>3</td>  <!--번호-->
+            <td>공지사항제목 3</td> <!--제목-->
+            <td><button>바로가기</button></td>  
+            <td> testg12</td>  <!--작성자-->
+            <td> 2021-03-01</td> <!--작성일-->
+            <td>98</td> <!--조회수-->
+        </tr>
+
+        <tr>
+            <td>2</td>  <!--번호-->
+            <td>공지사항제목 2</td> <!--제목-->
+            <td><button>바로가기</button></td>  
+            <td> palwe3</td>  <!--작성자-->
+            <td> 2021-01-02</td> <!--작성일-->
+            <td>85</td> <!--조회수-->
+        </tr>
+
+  
+        <tr>
+            <td>1</td>  <!--번호-->
+            <td>공지사항제목 1</td> <!--제목-->
+            <td><button>바로가기</button></td>  
+            <td> xml23</td>  <!--작성자-->
+            <td> 2020-12-24</td> <!--작성일-->
+            <td>124</td> <!--조회수-->
+        </tr>      
+
+        <tr style="background-color:  rgb(250, 149, 113)";>
+            <td colspan="4"> 전체공지사항 갯수</td>
+            <td colspan="2">5개</td>
+        </tr>
+    </tbody>
+
+
+
+    </table>
+
+
+
+
+</body>
+
+</html>

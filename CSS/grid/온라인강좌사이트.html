@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>날로 먹는 코딩</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body {
+            padding-bottom: 100px;
+            height: 100px;
+        }
+
+        .container {
+            display: grid;
+            grid-template-areas:
+                "nav nav nav"
+                "header header header"
+                "main main main"
+                "article article article"
+                "footer footer footer";
+            grid-template-columns: repeat(3, 1fr);
+            /* 3개 요소를 균등하게 분할 */
+            grid-template-rows: auto;
+            /* 자동으로 높이 조정 */
+            min-height: 100%;
+            position: relative;
+        }
+
+        /* nav 부분 */
+        nav {
+            grid-area: nav;
+            background-color: gray;
+            padding: 2px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+            height: 5rem;
+        }
+
+        nav li {
+            margin: 0 1rem;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        /* header 부분 */
+        header {
+            grid-area: header;
+            background-image: url(jumbotronBackground.jpg);
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        .header-item {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 2rem;
+            border-radius: 1rem;
+            text-align: center;
+            color: #fff;
+        }
+
+        .header-item h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .header-item p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .header-item button {
+            padding: 1rem 2rem;
+            font-size: 1.
+        }
+
+        .header-sections {
+            display: flex;
+            justify-content: space-between;
+            margin: 50px auto;
+        }
+
+        .header-section {
+            width: 30%;
+            text-align: center;
+        }
+
+        /* main부분 */
+        main {
+            grid-area: main;
+            display: flex;
+            flex-direction: row;
+            /* 요소들을 수평적으로 나열 */
+            align-items: stretch;
+            justify-content: space-between;
+            /* 각 요소를 균등하게 배치 */
+            padding: 50px;
+        }
+
+        main span {
+            flex-basis: 30%;
+            /* 각 요소가 균등하게 배치되도록 크기 지정 */
+            padding: 20px;
+            background-color: white;
+            margin: 0 10px;
+        }
+
+
+
+        .course {
+            display: flex;
+            align-items: center;
+            margin: 20px;
+        }
+
+        .course img {
+            float: left;
+            margin-right: 10px;
+        }
+
+        .course .description {
+            float: left;
+        }
+
+        /* article 부분 */
+        article {
+            margin-bottom: 100px;
+        }
+
+        /* footer 부분 */
+        footer {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background-color: gray;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+
+        footer ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+            height: 5rem;
+        }
+
+        footer li {
+            margin: 0 1rem;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="#">날로먹는 코딩</a></li>
+                <li><a href="#">소개</a></li>
+                <li><a href="#">강사진</a></li>
+                <li><a href="#">강의</a></li>
+                <li><input type="text" placeholder="검색할 내용을 입력하세요"><button>검색</button></li>
+            </ul>
+        </nav>
+
+        <header>
+            <div class="header-item">
+                <h1>날로 먹는 코딩 온라인 강좌 사이트</h1>
+                <p>날로 먹는 코딩은 IT 교육 사이트입니다. 다양한 날로 먹는 IT 관련 강의가 존재합니다.</p>
+                <button style="background-color: rgb(47, 123, 255);">강의 들으러 가기</button>
+            </div>
+        </header>
+
+        <main>
+            <div class="header-sections">
+                <span class="header-section">
+                    <p>날로 먹는 코딩의 특징</p>
+                    <p>날로 먹는 코딩은 다른 사이트와 차원이 다른 깔끔한 구성을 보여줍니다.</p>
+                    <button style="background-color: greenyellow;">자세히 알아보기</button>
+                </span>
+
+                <span class="header-section">
+                    <p>폭 넓은 강사진</p>
+                    <p>날로 먹는 코딩은 정말 뛰어난 능력을 가진 강사진으로 뽑습니다.</p>
+                    <button style="background-color: rgb(245, 85, 85);">자세히 알아보기</button>
+                </span>
+
+                <span class="header-section">
+                    <p>핵심적인 강의</p>
+                    <p>강의는 실제 개발에 있어서 반드시 필요한 핵심적인 내용을 중심으로 다룹니다.</p>
+                    <button style="background-color: skyblue;">자세히 알아보기</button>
+                </span>
+            </div>
+        </main>
+
+        <article>
+
+            <div class="latest-courses">
+                <h2>최신강의 목록</h2>
+                <div class="item">
+                    <span class="course">
+                        <img src="c.png" alt="C언어 기초 프로그래밍 강의">
+                        <div class="description">
+                            <p>C언어 기초 프로그래밍 강의</p>
+                            <p>C언어 강의는 기초 프로그래밍 강의입니다. 처음 프로그램을 접하는 입문자가 듣기 적합한 강의로 강의료는 무료이며 C언어 기초 프로그래밍 강의는 총 20강의로
+                                구성됩니다.</p>
+                        </div>
+                    </span>
+
+                    <span class="course">
+                        <img src="java.png" alt="JAVA기초 프로그래밍 강의">
+                        <div class="description">
+                            <p>JAVA기초 프로그래밍 강의</p>
+                            <p>JAVA언어 강의는 객체 지향 프로그래밍의 기본을 알려주는 강의 입니다. 처음 프로그램을 접하는 입문자가 듣기 적합한 강의로 강의료는 무료이며 JAVA기초
+                                프로그래밍 강의는 총 30강의로 구성됩니다.</p>
+                        </div>
+                    </span>
+
+                    <span class="course">
+                        <img src="android.png" alt="Android 언어 프로그래밍 강의">
+                        <div class="description">
+                            <p>Android 언어 프로그래밍 강의</p>
+                            <p>Android 강의는 java 또는 kotiln을 활용하여 Android 어플리케이션을 개발하는 프로그래밍 강의입니다.
+                        </div>
+                    </span>
+
+                </div>
+        </article>
+
+        <footer>
+            <ul>
+                <li> <span>
+                        <p>Copyright@</p>
+                        <p>홍길동(Hong gil dong)</p>
+                    </span></li>
+                <li>
+                    <span>
+                        <p>대표자 소개</p>
+                        <p>저는 날로 먹는 코딩의 대표 홍길동 입니다. 부트스트랩을 사용해서 웹 디자인을 하고 있습니다.</p>
+                    </span>
+                </li>
+                <li><span>
+                        <p>네비게이션</p>
+                        <p>소개</p>
+                        <p>강사진</p>
+                        <p>강의</p>
+                    </span></li>
+                <li> <span>
+                        <p>페이스북</p>
+                        <p>유튜브</p>
+                        <p>아프리카tv</p>
+                    </span></li>
+                <li>
+                    <span>
+                        <p>by홍길동</p>
+                    </span>
+                </li>
+            </ul>
+        </footer>
+
+
+
+    </div>
+</body>
+
+</html>

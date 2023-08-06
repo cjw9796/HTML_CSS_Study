@@ -1,0 +1,44 @@
+.container{
+    background-color: yellow;
+    width: 800px;
+    height: 300px;
+   border: 3px solid black;
+    display: flex;
+   
+    
+    /* justify-content:주축 설정(가로위치 지정)
+    center(중앙) / flex-start(왼쪽) / flex-end(오른쪽)
+    */
+    justify-content: center; 
+    justify-content: space-between;
+
+    /*align-items: end;: 교차축 설정(위아래를 지정)*/
+    align-items: center;
+
+    /* direction은 row로 기본 설정되어있다.
+    초기세팅: 가로(행 기준)
+    column적용시: 세로(열 기준)
+    */
+    flex-direction: row; 
+    
+    /* flex-direction: row-reverse;  순서 뒤집기*/ 
+    flex-direction: row-reverse; 
+
+    /*데이터의 개수가 많아도 한 줄로 정리 flex-wrap: nowrap; 
+    데이터의 개수가 많으면 여러개 줄 자동정렬 flex-wrap: wrap; */
+    flex-wrap: nowrap; 
+
+} 
+
+
+.item{
+    width: 30px;
+    height: 30px;
+    background-color: red;
+    border: 3px solid black;
+    margin: 10px;
+    padding: 5px;
+}
+
+
+
